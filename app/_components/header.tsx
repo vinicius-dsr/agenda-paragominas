@@ -11,7 +11,7 @@ export default function Header() {
         <Link href="/">
           <Image src="/logo.png" alt="" width={150} height={150} />
         </Link>
-        <Button variant="outline" className="px-3">
+        <Button variant="outline" size="icon" className="">
           <Menu />
         </Button>
       </div>
