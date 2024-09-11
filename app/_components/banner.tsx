@@ -11,7 +11,7 @@ export default function Banner() {
   return (
     <div className="relative mx-auto w-full max-w-screen-xl px-4 py-3 md:py-0">
       <Carousel autoplay={true} interval={4000}>
-        <CarouselContent className="space-x-4">
+        <CarouselContent className="">
           <CarouselItem className="py-5 md:py-2 md:pb-6">
             <Image
               src="/banner.png"

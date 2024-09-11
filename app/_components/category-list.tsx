@@ -1,5 +1,8 @@
+import Link from "next/link";
 import { db } from "../_lib/prisma";
+import { cn } from "../_lib/utils";
 import CategoryItem from "./category-item";
+import { buttonVariants } from "./ui/button";
 
 export default async function CategoryList() {
   const category = await db.category.findMany({
@@ -15,6 +18,12 @@ export default async function CategoryList() {
       {category.map((category) => (
         <CategoryItem key={category.id} category={category} />
       ))}
+      <Link
+        href=""
+        className={cn(buttonVariants({ variant: "outline" }), "rounded-full")}
+      >
+        Ver todas
+      </Link>
     </div>
   );
 }
