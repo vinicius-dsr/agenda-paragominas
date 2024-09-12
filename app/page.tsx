@@ -26,7 +26,7 @@ export default function Home() {
       <div className="mx-auto mt-3 flex max-w-screen-xl items-center justify-between px-4">
         <h3 className="text-lg">Órgãos públicos</h3>
         <Link
-          href=""
+          href="/categorias/orgaos-publicos"
           className="text-sm text-muted-foreground transition-all hover:text-foreground"
         >
           Ver todos

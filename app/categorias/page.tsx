@@ -20,7 +20,7 @@ export default async function CategoriasPage() {
       <div className="mx-auto max-w-screen-xl px-4 py-6 md:px-0">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {categories.map((category) => (
-            <Link key={category.id} href="">
+            <Link key={category.id} href={`/categorias/${category.slug}`}>
               <Card className="min-h-[250px] w-full py-1 md:min-h-[300px]">
                 <Image
                   src={category.icon}
