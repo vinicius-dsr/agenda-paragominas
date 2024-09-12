@@ -21,7 +21,7 @@ export default async function CategoriasPage() {
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {categories.map((category) => (
             <Link key={category.id} href="">
-              <Card className="min-h-[250px] w-full md:min-h-[300px]">
+              <Card className="min-h-[250px] w-full py-1 md:min-h-[300px]">
                 <Image
                   src={category.icon}
                   alt={category.name}
@@ -31,7 +31,7 @@ export default async function CategoriasPage() {
                   quality={100}
                   className="max-h-[150px] w-full object-contain p-6 invert md:mt-3 md:max-h-[200px]"
                 />
-                <CardContent className="pt-4">
+                <CardContent className="p-4">
                   <div className="flex flex-col items-center">
                     <h3 className="text-center text-lg font-semibold">
                       {category.name}

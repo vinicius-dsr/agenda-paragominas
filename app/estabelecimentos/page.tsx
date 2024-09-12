@@ -1,3 +1,4 @@
+import Image from "next/image";
 import EstablishmentItem from "../_components/establishment-item";
 import Header from "../_components/header";
 import Search from "../_components/search";
@@ -31,17 +32,28 @@ export default async function EstabelecimentoPage({
         <div className="flex flex-col gap-4">
           <h3>
             Resultados para:{" "}
-            <span className="text-semibold">
+            <span className="font-semibold">
               &quot;{searchParams.search}&quot;
             </span>
           </h3>
 
           {establishments.length === 0 ? (
-            <div>
-              <h3>nada aqui</h3>
+            <div className="flex flex-col items-center gap-5 py-10">
+              <Image
+                src="/not-found.png"
+                alt="Nenhum estabelecimento encontrado"
+                width={0}
+                height={0}
+                sizes="100%"
+                quality={100}
+                className="h-[300px] w-full object-contain"
+              />
+              <span className="text-muted-foreground">
+                Nenhum resultado para &quot;{searchParams.search}&quot;
+              </span>
             </div>
           ) : (
-            <div className="md: grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div className="md: grid grid-cols-1 gap-4 md:grid-cols-4">
               {establishments.map((establishment) => (
                 <EstablishmentItem
                   key={establishment.id}

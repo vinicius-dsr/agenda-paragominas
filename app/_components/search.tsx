@@ -25,7 +25,7 @@ export default function Search() {
   const router = useRouter();
 
   const handlerSubmit = (data: z.infer<typeof formSchema>) => {
-    router.push(`/estabelecimento?search=${data.search}`);
+    router.push(`/estabelecimentos?search=${data.search}`);
   };
 
   return (
