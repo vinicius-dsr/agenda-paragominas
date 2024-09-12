@@ -10,7 +10,7 @@ interface EstabelecimentoSearchProps {
   };
 }
 
-export default async function EstabelecimentoPage({
+export default async function EstabelecimentoSearchPage({
   searchParams,
 }: EstabelecimentoSearchProps) {
   const establishments = await db.establishment.findMany({

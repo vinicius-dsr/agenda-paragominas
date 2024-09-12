@@ -177,7 +177,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/30209b9d-e8d1-48a3-ac96-74a020a7366c-5r0hr5.jpg",
       address: "Av. Pres. Vargas, 345 - Centro",
-      mapsUrl: ["https://maps.app.goo.gl/gspkU7aTwnhV9gvB7"],
+      mapsUrl: "https://maps.app.goo.gl/gspkU7aTwnhV9gvB7",
       phones: ["(91) 3729-3758"],
       categoriesSlugs: ["todos", "orgaos-publicos", "clinicas-e-hospitais"],
     },
@@ -192,7 +192,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/a3bd78c3-44fa-419e-9715-21af926db282-x6dpf9.jpg",
       address: "Av. Manoel Dias Corrêa, s/n - Uraim II",
-      mapsUrl: ["https://maps.app.goo.gl/Vvi2H6GwRiVLeNe69"],
+      mapsUrl: "https://maps.app.goo.gl/Vvi2H6GwRiVLeNe69",
       phones: ["(91) 3729-8058"],
       categoriesSlugs: ["todos", "orgaos-publicos", "clinicas-e-hospitais"],
     },
@@ -207,7 +207,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/771140a2-d072-4086-b00a-b0cb93ff1d24-vst2z6.jpg",
       address: "Rua Adelaide Bernardes, S/N - Bairro Nova Conquista",
-      mapsUrl: ["https://maps.app.goo.gl/kg9NQd71xY1GxCXX8"],
+      mapsUrl: "https://maps.app.goo.gl/kg9NQd71xY1GxCXX8",
       phones: ["(91) 3739-1046"],
       categoriesSlugs: ["todos", "orgaos-publicos", "clinicas-e-hospitais"],
     },
@@ -222,7 +222,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/6378cbbd-c367-4dce-bf27-e6b29d2dba77-1j5d.jpeg",
       address: "R. Santa Terezinha, 304 - Centro",
-      mapsUrl: ["https://maps.app.goo.gl/gn9Hzz2aoJ9A1Y2E7"],
+      mapsUrl: "https://maps.app.goo.gl/gn9Hzz2aoJ9A1Y2E7",
       phones: ["(91) 9100-0303", "(91) 3729-3567"],
       categoriesSlugs: ["todos", "orgaos-publicos", "clinicas-e-hospitais"],
     },
@@ -237,7 +237,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/f6fcaeb9-4415-4b5d-ac8b-bf50013dedff-mm9gzj.jpg",
       address: "R. Arlindo Batista, 130 - Promissão III",
-      mapsUrl: ["https://maps.app.goo.gl/Ktrrtp5Rkitr7xHN8"],
+      mapsUrl: "https://maps.app.goo.gl/Ktrrtp5Rkitr7xHN8",
       phones: ["(91) 98487-4984"],
       categoriesSlugs: ["orgaos-publicos"],
     },
@@ -253,7 +253,7 @@ async function main() {
         "https://utfs.io/f/98ecf5c4-1080-4e9e-94f9-6e1c353de478-2oz.jpg",
       address:
         "Loteamento Módulo II - R. Antônio de Andrade Barbalho, S/N - Centro",
-      mapsUrl: ["https://maps.app.goo.gl/Gnu7mYPdWTBqxj277"],
+      mapsUrl: "https://maps.app.goo.gl/Gnu7mYPdWTBqxj277",
       phones: ["(91) 3729-1783"],
       categoriesSlugs: ["todos", "orgaos-publicos"],
     },
@@ -268,7 +268,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/f415483c-e47a-48c3-a68e-bd4285cc0704-o9to95.jpg",
       address: "Av. do Contorno, 1212 - Centro",
-      mapsUrl: ["https://maps.app.goo.gl/teqHHvfSo7o3d45i7"],
+      mapsUrl: "https://maps.app.goo.gl/teqHHvfSo7o3d45i7",
       phones: ["(91) 3729-8038"],
       categoriesSlugs: ["todos", "orgaos-publicos"],
     },
@@ -283,7 +283,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/30e1bf48-b52e-4d8f-9324-cb6a16b0b8ed-r8ngo4.jpg",
       address: "R. Manoel Barata, n°116 - Bairro Célio Mirandia",
-      mapsUrl: ["https://maps.app.goo.gl/vHTxxEdZQfPEhLF59"],
+      mapsUrl: "https://maps.app.goo.gl/vHTxxEdZQfPEhLF59",
       phones: ["(91) 3729-1324"],
       categoriesSlugs: ["todos", "orgaos-publicos"],
     },
@@ -298,7 +298,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/98024fca-79f3-4993-bc71-d5ddecf799b0-dmh8ua.jpg",
       address: "R. Caramuru, 1B - Jaderlândia",
-      mapsUrl: ["https://maps.app.goo.gl/gYGNP6L2iyXUi4uC8"],
+      mapsUrl: "https://maps.app.goo.gl/gYGNP6L2iyXUi4uC8",
       phones: ["(91) 98565-7227"],
       categoriesSlugs: ["todos", "distribuidora-de-gas", "recomendados"],
     },
@@ -313,7 +313,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/4d7de83e-6f09-4de6-98fa-5f73647f1566-1x4tz.jpg",
       address: "R. Mal. Rondon, 100 - Bairro Célio Miranda",
-      mapsUrl: ["https://maps.app.goo.gl/mHFH9BSypLt7z1N58"],
+      mapsUrl: "https://maps.app.goo.gl/mHFH9BSypLt7z1N58",
       phones: ["(91) 3202-5601", "(91) 3202-5602"],
       categoriesSlugs: ["todos", "orgaos-publicos"],
     },
@@ -328,7 +328,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/5f8388ff-b8de-4152-9cc6-3c6935d905cb-4diyd9.jpeg",
       address: "R. Santa Terezinha, 285 - Centro",
-      mapsUrl: ["https://maps.app.goo.gl/j29gK1KJtoD1fcja8"],
+      mapsUrl: "https://maps.app.goo.gl/j29gK1KJtoD1fcja8",
       phones: ["(91) 98187-2271"],
       categoriesSlugs: ["hosteis-e-moteis"],
     },
@@ -343,7 +343,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/1a29bdda-60b5-4ad4-8420-87f7277a7adb-rg2wmn.jpg",
       address: "R. Quinze de Novembro, 83 - Centro",
-      mapsUrl: ["https://maps.app.goo.gl/axKzVnwoWwUuDsTSA"],
+      mapsUrl: "https://maps.app.goo.gl/axKzVnwoWwUuDsTSA",
       phones: ["(91) 3729-2132"],
       categoriesSlugs: ["todos", "hosteis-e-moteis"],
     },
@@ -358,7 +358,7 @@ async function main() {
       imageUrl:
         "https://utfs.io/f/d9f828c5-df83-4f3a-a31e-49aea762607a-5znpy9.jpeg",
       address: "PA-125, S/N - CX Postal 036 - LT Módulo I - Centro",
-      mapsUrl: ["https://maps.app.goo.gl/8P2K78LdibwxBUaf8"],
+      mapsUrl: "https://maps.app.goo.gl/8P2K78LdibwxBUaf8",
       phones: ["(91) 3729-5528"],
       categoriesSlugs: ["todos", "centro-de-exposicoes"],
     },

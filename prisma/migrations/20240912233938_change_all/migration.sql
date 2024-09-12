@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Establishment" ALTER COLUMN "mapsUrl" SET NOT NULL,
+ALTER COLUMN "mapsUrl" SET DATA TYPE TEXT;

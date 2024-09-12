@@ -31,7 +31,7 @@ model Establishment {
   operation             String
   imageUrl              String
   address               String
-  mapsUrl               String[]
+  mapsUrl               String
   phones                String[]
   categories            Category[]              @relation("EstablishmentCategories")
   EstablishmentCategory EstablishmentCategory[]

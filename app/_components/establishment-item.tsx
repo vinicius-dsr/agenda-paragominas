@@ -1,7 +1,9 @@
 import { Establishment } from "@prisma/client";
 import Image from "next/image";
+import Link from "next/link";
+import { cn } from "../_lib/utils";
+import { buttonVariants } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
-import { Button } from "./ui/button";
 
 interface EstablishmenteItemProps {
   establishment: Establishment;
@@ -29,10 +31,12 @@ export default function EstablishmentItem({
           <p className="truncate text-sm text-muted-foreground">
             {establishment.address}
           </p>
-
-          <Button variant="secondary" className="mt-2">
+          <Link
+            href={`/estabelecimentos/${establishment.slug}`}
+            className={cn(buttonVariants({ variant: "secondary" }), "mt-2")}
+          >
             Ver local
-          </Button>
+          </Link>
         </div>
       </CardContent>
     </Card>
