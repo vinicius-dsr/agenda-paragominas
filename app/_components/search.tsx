@@ -11,7 +11,7 @@ export default function Search() {
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex w-full items-center gap-2">
       <Input
         placeholder="Pesquisar aqui..."
         value={searchTerm}

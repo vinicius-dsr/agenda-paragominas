@@ -19,7 +19,7 @@ export default async function CategoryList() {
         <CategoryItem key={category.id} category={category} />
       ))}
       <Link
-        href=""
+        href="/categorias"
         className={cn(buttonVariants({ variant: "outline" }), "rounded-full")}
       >
         Ver todas

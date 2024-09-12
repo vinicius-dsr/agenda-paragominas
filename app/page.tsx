@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
 
       {/* Pesquisa */}
-      <div className="mx-auto max-w-screen-xl px-4 py-6 md:px-0">
+      <div className="mx-auto max-w-screen-xl px-4 py-6 md:hidden md:px-0">
         <Search />
       </div>
 
@@ -23,11 +23,11 @@ export default function Home() {
       <Banner />
 
       {/* Orgãos públicos */}
-      <div className="mt-3 flex items-center justify-between px-4">
+      <div className="mx-auto mt-3 flex max-w-screen-xl items-center justify-between px-4">
         <h3 className="text-lg">Órgãos públicos</h3>
         <Link
           href=""
-          className="text-sm text-muted-foreground transition-all hover:text-foreground hover:underline"
+          className="text-sm text-muted-foreground transition-all hover:text-foreground"
         >
           Ver todos
         </Link>

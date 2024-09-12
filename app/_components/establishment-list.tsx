@@ -14,7 +14,7 @@ export default async function EstablishmentList() {
     },
   });
   return (
-    <div className="flex gap-4 overflow-auto px-4 py-6 [&::-webkit-scrollbar]:hidden">
+    <div className="mx-auto flex max-w-screen-xl gap-4 overflow-auto px-4 py-6 [&::-webkit-scrollbar]:hidden">
       {establishment.map((establishment) => (
         <EstablishmentItem
           key={establishment.id}

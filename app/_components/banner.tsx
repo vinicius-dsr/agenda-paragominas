@@ -9,7 +9,7 @@ import {
 
 export default function Banner() {
   return (
-    <div className="relative mx-auto w-full max-w-screen-xl px-4 py-3 md:py-0">
+    <div className="relative mx-auto w-full max-w-screen-xl px-4 py-3 md:py-4">
       <Carousel autoplay={true} interval={4000}>
         <CarouselContent className="">
           <CarouselItem className="py-5 md:py-2 md:pb-6">
