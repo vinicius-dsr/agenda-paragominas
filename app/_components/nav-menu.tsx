@@ -17,7 +17,7 @@ export default function NavMenu() {
         Categorias
       </Link>
       <Link
-        href=""
+        href="/sugestoes"
         className={cn(buttonVariants(), "flex items-center gap-2 rounded-full")}
       >
         <BoxIcon size={17} />
