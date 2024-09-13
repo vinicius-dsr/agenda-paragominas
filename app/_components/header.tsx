@@ -9,7 +9,7 @@ import NavMenu from "./nav-menu";
 export default function Header() {
   return (
     <Card className="w-full rounded-none border-x-0 border-t-0 py-4 md:py-6">
-      <div className="mx-auto flex max-w-screen-xl items-center justify-between px-4 md:gap-4 md:px-0">
+      <div className="mx-auto flex max-w-screen-xl items-center justify-between px-4 md:gap-4 lg:px-0">
         <Link href="/">
           <Image
             src="/logo.png"
@@ -22,15 +22,15 @@ export default function Header() {
           />
         </Link>
 
-        <div className="hidden w-full md:inline-flex">
+        <div className="hidden w-full lg:inline-flex">
           <Search />
         </div>
 
-        <div className="hidden md:inline-flex">
+        <div className="hidden lg:inline-flex">
           <NavMenu />
         </div>
 
-        <Button variant="outline" size="icon" className="md:hidden">
+        <Button variant="outline" size="icon" className="lg:hidden">
           <Menu />
         </Button>
       </div>

@@ -27,10 +27,13 @@ export default async function EstabelecimentoPage({
 
   return (
     <>
-      <Header />
-      <div className="mx-auto max-w-screen-xl px-4 py-6 md:px-0">
-        <div className="flex gap-6">
-          <div className="flex w-[60vw] flex-col gap-4">
+      <div className="hidden md:block lg:block">
+        <Header />
+      </div>
+      {/* Desktop version */}
+      <div className="mx-auto hidden max-w-screen-xl px-4 py-6 md:block lg:block lg:px-0">
+        <div className="mx-auto flex w-full flex-col gap-6 lg:flex-row">
+          <div className="flex w-full flex-col gap-4 lg:min-w-[60vw]">
             <Image
               src={establishment.imageUrl}
               alt={establishment.name}
@@ -54,7 +57,7 @@ export default async function EstabelecimentoPage({
             </div>
           </div>
 
-          <Card className="w-[25vw]">
+          <Card className="w-full lg:min-w-[25vw]">
             <div className="relative flex h-[150px] items-center justify-center">
               <Image
                 src="/map.png"
@@ -70,11 +73,13 @@ export default async function EstabelecimentoPage({
                 target="_blank"
                 className="absolute"
               >
-                <Card className="rounded-2xl">
-                  <div className="flex items-center gap-4 px-4 py-2">
+                <Card className="h-auto max-w-[250px] rounded-2xl">
+                  <div className="flex items-center gap-4 truncate px-4 py-2">
                     <MapPinned size={40} />
-                    <div className="flex flex-col">
-                      <span className="font-medium">{establishment.name}</span>
+                    <div className="flex flex-col truncate">
+                      <span className="truncate font-medium">
+                        {establishment.name}
+                      </span>
                       <span className="text-sm text-muted-foreground">
                         Ver no maps
                       </span>
