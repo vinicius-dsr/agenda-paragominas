@@ -7,7 +7,7 @@ import { Clock, MapPin, MapPinned, MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import BackButton from "./_componets/button-back";
+import BackButton from "./_components/button-back";
 
 interface EstabelecimentoProps {
   params: {
@@ -33,7 +33,7 @@ export default async function EstabelecimentoPage({
       <div className="hidden md:block lg:block">
         <Header />
       </div>
-      <div className="mx-auto hidden max-w-screen-xl px-4 py-6 md:block lg:block lg:px-0">
+      <div className="mx-auto hidden max-w-screen-xl px-4 md:block md:py-6 lg:block lg:px-0 lg:pb-10 lg:pt-6">
         <div className="mx-auto flex w-full flex-col gap-6 lg:flex-row">
           <div className="flex w-full flex-col gap-4 lg:min-w-[60vw]">
             <Image
@@ -128,9 +128,9 @@ export default async function EstabelecimentoPage({
           </Button>
         </div>
 
-        <div className="flex flex-col gap-4 px-4">
+        <div className="flex flex-col gap-4 px-4 pb-6">
           <div className="mb-2 flex flex-col gap-2">
-            <h3 className="py-2 text-xl font-medium">{establishment.name}</h3>
+            <h3 className="mb-2 text-xl font-medium">{establishment.name}</h3>
             <span className="flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin size={17} /> {establishment.address}
             </span>
@@ -146,7 +146,7 @@ export default async function EstabelecimentoPage({
             </p>
           </div>
           <hr />
-          <div className="flex flex-col gap-2">
+          <div className="mb-2 flex flex-col gap-2">
             <span className="">Contatos</span>
             <div>
               {establishment.phones.map((phone) => (

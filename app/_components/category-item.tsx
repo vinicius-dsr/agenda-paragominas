@@ -10,7 +10,7 @@ interface CategoryItemProps {
 export default function CategoryItem({ category }: CategoryItemProps) {
   return (
     <Link
-      href=""
+      href={`/categorias/${category.slug}`}
       className={cn(buttonVariants({ variant: "secondary" }), "rounded-full")}
     >
       {category.name}

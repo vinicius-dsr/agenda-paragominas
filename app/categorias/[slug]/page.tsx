@@ -33,7 +33,7 @@ export default async function CategoriaPage({
         <h2 className="text-lg">{category.name}</h2>
 
         {category.establishments.length === 0 ? (
-          <div className="flex flex-col items-center gap-5 py-10">
+          <div className="flex flex-col items-center gap-5 py-28 lg:py-10">
             <Image
               src="/not-found.png"
               alt="Nenhum estabelecimento encontrado"

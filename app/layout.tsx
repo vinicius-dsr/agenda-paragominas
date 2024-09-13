@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { cn } from "@/app/_lib/utils";
 import { Toaster } from "sonner";
+import Footer from "./_components/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -19,10 +20,14 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="dark">
       <body
-        className={cn("min-h-screen bg-background antialiased", inter.variable)}
+        className={cn(
+          "flex min-h-screen flex-col scroll-smooth bg-background antialiased",
+          inter.variable,
+        )}
       >
-        {children}
+        <main className="flex-grow">{children}</main>
         <Toaster />
+        <Footer />
       </body>
     </html>
   );
