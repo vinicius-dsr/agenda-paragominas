@@ -1,12 +1,34 @@
 import EstablishmentItem from "@/app/_components/establishment-item";
 import Header from "@/app/_components/header";
 import { db } from "@/app/_lib/prisma";
+import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
 interface CategoriaProps {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata(
+  { params }: CategoriaProps,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const category = await db.category.findUnique({
+    where: {
+      slug: params.slug,
+    },
+  });
+  const previousImages = (await parent).openGraph?.images || [];
+  const title = category?.name;
+  const imageUrl = category?.icon;
+  return {
+    title: title,
+    description: `Todos os estabelecimentos da categoria ${category?.name}`,
+    openGraph: {
+      images: [...(imageUrl ? [imageUrl] : []), ...previousImages],
+    },
   };
 }
 

@@ -10,10 +10,33 @@ import { notFound } from "next/navigation";
 import BackButton from "./_components/button-back";
 import { Sheet, SheetContent, SheetTrigger } from "@/app/_components/ui/sheet";
 import MobileMenu from "@/app/_components/mobile-menu";
+import { Metadata, ResolvingMetadata } from "next";
 
 interface EstabelecimentoProps {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata(
+  { params }: EstabelecimentoProps,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const establishment = await db.establishment.findUnique({
+    where: {
+      slug: params.slug,
+    },
+  });
+  const previousImages = (await parent).openGraph?.images || [];
+  const title = establishment?.name;
+  const desc = establishment?.description;
+  const imageUrl = establishment?.imageUrl;
+  return {
+    title: title,
+    description: desc,
+    openGraph: {
+      images: [...(imageUrl ? [imageUrl] : []), ...previousImages],
+    },
   };
 }
 
