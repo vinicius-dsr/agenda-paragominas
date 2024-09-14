@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-// import nodemailer from "nodemailer";
+import nodemailer from "nodemailer"; // Mudança aplicada
+import dotenv from "dotenv";
 
-require("dotenv").config();
+dotenv.config(); // Carregar as variáveis de ambiente
 
 const login = process.env.EMAIL;
 const pass = process.env.EMAIL_PASS;
@@ -17,8 +18,6 @@ export default async function handler(
 
   try {
     const { name, number, message } = req.body;
-
-    const nodemailer = require("nodemailer");
 
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
@@ -39,7 +38,6 @@ export default async function handler(
         <b>Nome:</b> ${name}<br/>
         <b>Contato:</b> ${number}<br/>
         <b>Mensagem:</b> ${message}<br/>
-
       `, // html body
     });
 

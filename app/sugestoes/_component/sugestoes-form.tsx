@@ -1,11 +1,11 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
+import { Button } from "@/app/_components/ui/button";
 import { Input } from "@/app/_components/ui/input";
 import { Textarea } from "@/app/_components/ui/textarea";
-import { Button } from "@/app/_components/ui/button";
+import { Loader2 } from "lucide-react";
+import React, { FormEvent, useState } from "react";
+import { toast } from "sonner";
 
 export default function SuggestionForm() {
   const [name, setName] = useState("");
@@ -40,7 +40,7 @@ export default function SuggestionForm() {
       } else {
         toast.error("Falha ao enviar o email 😞");
       }
-    } catch (error: any) {
+    } catch (error) {
       toast.error("Falha ao enviar o email 😞");
     } finally {
       setIsLoading(false);
