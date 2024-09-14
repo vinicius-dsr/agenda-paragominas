@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { cn } from "@/app/_lib/utils";
 import { Toaster } from "sonner";
 import Footer from "./_components/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -54,6 +55,7 @@ export default function RootLayout({
         )}
       >
         <main className="flex-grow">{children}</main>
+        <Analytics />
         <Toaster />
         <Footer />
       </body>
