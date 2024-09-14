@@ -8,6 +8,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import BackButton from "./_components/button-back";
+import { Sheet, SheetContent, SheetTrigger } from "@/app/_components/ui/sheet";
+import MobileMenu from "@/app/_components/mobile-menu";
 
 interface EstabelecimentoProps {
   params: {
@@ -120,12 +122,19 @@ export default async function EstabelecimentoPage({
             className="h-[300px] w-full object-cover"
           />
           <BackButton />
-          <Button
-            variant="outline"
-            className="absolute right-3 top-3 rounded-xl bg-transparent/80 px-3 py-6"
-          >
-            <MenuIcon />
-          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button
+                variant="outline"
+                className="absolute right-3 top-3 rounded-xl bg-transparent/80 px-3 py-6"
+              >
+                <MenuIcon />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <MobileMenu />
+            </SheetContent>
+          </Sheet>
         </div>
 
         <div className="flex flex-col gap-4 px-4 pb-6">

@@ -1,10 +1,12 @@
-import Link from "next/link";
-import { Card } from "./ui/card";
-import Image from "next/image";
-import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
-import Search from "./search";
+import Image from "next/image";
+import Link from "next/link";
 import NavMenu from "./nav-menu";
+import Search from "./search";
+import { Button } from "./ui/button";
+import { Card } from "./ui/card";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import MobileMenu from "./mobile-menu";
 
 export default function Header() {
   return (
@@ -18,7 +20,7 @@ export default function Header() {
             height={0}
             sizes="100%"
             quality={100}
-            className="w-[150px] md:w-[200px]"
+            className="w-[120px] md:w-[150px] lg:w-[200px]"
           />
         </Link>
 
@@ -30,9 +32,16 @@ export default function Header() {
           <NavMenu />
         </div>
 
-        <Button variant="outline" size="icon" className="lg:hidden">
-          <Menu />
-        </Button>
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="outline" size="icon" className="lg:hidden">
+              <Menu />
+            </Button>
+          </SheetTrigger>
+          <SheetContent>
+            <MobileMenu />
+          </SheetContent>
+        </Sheet>
       </div>
     </Card>
   );

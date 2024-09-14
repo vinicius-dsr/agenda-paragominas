@@ -6,7 +6,7 @@ export default function SugestoesPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto max-w-screen-lg px-4 py-6 lg:px-0">
+      <div className="mx-auto max-w-screen-lg px-4 pb-6 pt-2 lg:px-0 lg:py-6">
         <div className="mx-auto pb-5 lg:py-6">
           <div className="flex flex-col gap-4 p-4 lg:flex-row lg:gap-8">
             <div className="flex flex-col gap-4 py-4 text-center">
@@ -24,7 +24,7 @@ export default function SugestoesPage() {
               </h2>
               <span className="text-sm text-muted-foreground lg:text-base">
                 Não encontrou o estabelecimento que você estava procurando,
-                alguma informação errado ou tem alguma dica para melhorarmos
+                alguma informação errada ou tem alguma dica para melhorarmos
                 nosso site ? Nos fale um pouco mais...
               </span>
             </div>
