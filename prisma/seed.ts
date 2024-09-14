@@ -1,6 +1,6 @@
-import { PrismaClient } from "@prisma/client";
+// import { PrismaClient } from "@prisma/client";
 
-// const { PrismaClient } = require("@prisma/client");
+const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
@@ -361,6 +361,20 @@ async function main() {
       mapsUrl: "https://maps.app.goo.gl/8P2K78LdibwxBUaf8",
       phones: ["(91) 3729-5528"],
       categoriesSlugs: ["todos", "centro-de-exposicoes"],
+    },
+
+    // Leal Rações
+    {
+      name: "Leal Rações | Casa de Ração em Paragominas",
+      slug: "leal-racoes",
+      description: "Rações, medicamentos e acessórios.",
+      operation: "07h - 20h",
+      imageUrl:
+        "https://utfs.io/f/wbiaIUNrgdHyHc6hdXaIXCEGDdkLJM59jy0rtSP8wl73mTze",
+      address: "R. Barão Araruna - Bairro da Promissão III",
+      mapsUrl: "https://maps.app.goo.gl/qbEhRXsGXS1yiaSMA",
+      phones: ["(91) 99119-8562"],
+      categoriesSlugs: ["todos", "petshop", "recomendados"],
     },
   ];
 
