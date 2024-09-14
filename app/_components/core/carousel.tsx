@@ -311,12 +311,12 @@ function CarouselContent({
       }}
       onDragEnd={onDragEnd}
       transition={
-        {
+        transition || {
           damping: 18,
           stiffness: 90,
           type: "spring",
           duration: 0.2,
-        } || transition
+        }
       }
       className={cn(
         "flex cursor-grab items-center active:cursor-grabbing",
