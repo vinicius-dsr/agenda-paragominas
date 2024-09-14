@@ -8,7 +8,11 @@ export default function Footer() {
   return (
     <Card className="w-full rounded-none border-x-0 border-b-0 py-4 lg:py-6">
       <div className="mx-auto flex max-w-screen-xl items-center justify-between px-4 lg:px-0">
-        <Link href="" className="text-sm text-muted-foreground">
+        <Link
+          href="https://www.vinidev.tech/"
+          target="_blank"
+          className="text-sm text-muted-foreground"
+        >
           &copy; Vinícius Reis
         </Link>
         <Link
