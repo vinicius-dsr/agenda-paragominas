@@ -1,6 +1,6 @@
-// import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 
-const { PrismaClient } = require("@prisma/client");
+// const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
@@ -392,6 +392,33 @@ async function main() {
             })),
           },
         },
+      }),
+    ),
+  );
+
+  const banners = [
+    {
+      name: "Banner de contato para anúncio",
+      imageUrl:
+        "https://utfs.io/f/wbiaIUNrgdHy5qe7DWHRKnVTkOU3ING7mrEjCQHw5uZqWb1l",
+      href: "https://wa.me/5591992761377?text=Ol%C3%A1,%20vim%20pela%20Agenda%20Paragominas",
+      target: "_blank",
+    },
+    {
+      name: "Banner de estabelecimentos recomendados",
+      imageUrl:
+        "https://utfs.io/f/wbiaIUNrgdHy39kWuHhs4j9LROcYeNvyMA6xIKufzaitqwnl",
+      href: "https://agenda-paragominas.vercel.app/categorias/recomendados",
+      target: "_self",
+    },
+  ];
+
+  await Promise.all(
+    banners.map((banner) =>
+      prisma.banner.upsert({
+        where: { name: banner.name },
+        update: {},
+        create: banner,
       }),
     ),
   );

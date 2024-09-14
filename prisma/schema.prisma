@@ -37,6 +37,14 @@ model Establishment {
   EstablishmentCategory EstablishmentCategory[]
 }
 
+model Banner {
+  id       String @id @default(uuid())
+  name     String @unique
+  imageUrl String
+  href     String
+  target   String
+}
+
 model EstablishmentCategory {
   establishmentId String
   categoryId      String
