@@ -31,7 +31,7 @@ export default async function handler(
 
     const info = await transporter.sendMail({
       from: '"Novo Projeto" <viniciusreis3105@gmail.com>', // sender address
-      to: "viniciusreis3105@gmail.com, viniciusconta30@gmail.com", // list of receivers
+      to: "viniciusreis3105@gmail.com, viniciusconta30@outlook.com", // list of receivers
       subject: "Nova sugestão para Agenda Paragominas !", // Subject line
       html: `
         <h3>Nova sugestão para Agenda Paragominas !</h3>
