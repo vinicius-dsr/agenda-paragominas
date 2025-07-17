@@ -60,7 +60,7 @@ export default async function EstabelecimentoPage({
       </div>
       <div className="mx-auto hidden max-w-screen-xl px-4 md:block md:py-6 lg:block lg:px-0 lg:pb-10 lg:pt-6">
         <div className="mx-auto flex w-full flex-col gap-6 lg:flex-row">
-          <div className="flex w-full flex-col gap-4 lg:min-w-[60vw]">
+          <div className="flex w-full flex-col gap-4 lg:min-w-[45vw]">
             <Image
               src={establishment.imageUrl}
               alt={establishment.name}
@@ -84,7 +84,7 @@ export default async function EstabelecimentoPage({
             </div>
           </div>
 
-          <Card className="w-full lg:min-w-[25vw]">
+          <Card className="w-full lg:min-w-[20vw]">
             <div className="relative flex h-[150px] items-center justify-center">
               <Image
                 src="/map.png"
