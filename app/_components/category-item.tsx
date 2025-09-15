@@ -1,4 +1,4 @@
-import { Category } from "@prisma/client";
+import type { Category } from "@prisma/client";
 import Link from "next/link";
 import { cn } from "../_lib/utils";
 import { buttonVariants } from "./ui/button";

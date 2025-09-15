@@ -1,14 +1,21 @@
-import React from "react";
 import { db } from "../_lib/prisma";
 import EstablishmentItem from "./establishment-item";
 
-export default async function EstablishmentList() {
+interface EstablishmentListProps {
+  categoryName: string;
+  limit?: number;
+}
+
+export default async function EstablishmentList({
+  categoryName,
+  limit = 6,
+}: EstablishmentListProps) {
   const establishment = await db.establishment.findMany({
-    take: 6,
+    take: limit,
     where: {
       categories: {
         some: {
-          name: "Órgãos Públicos",
+          name: categoryName,
         },
       },
     },
