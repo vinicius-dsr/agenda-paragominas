@@ -1,4 +1,4 @@
-import { Establishment } from "@prisma/client";
+import type { Establishment } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "../_lib/utils";
@@ -13,7 +13,7 @@ export default function EstablishmentItem({
   establishment,
 }: EstablishmenteItemProps) {
   return (
-    <Card className="min-w-[250px] md:min-w-[300px]">
+    <Card className="min-w-[250px] max-w-[300px] md:min-w-[300px]">
       <Image
         src={establishment.imageUrl}
         alt={establishment.name}
