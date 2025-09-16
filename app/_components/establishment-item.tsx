@@ -25,7 +25,7 @@ export default function EstablishmentItem({
         href={establishmentUrl}
         className={cn("block md:hidden", mobileCardMaxWidth)}
       >
-        <Card className="w-full min-w-[250px]">
+        <Card className="w-full min-w-[300px]">
           <Image
             src={establishment.imageUrl}
             alt={establishment.name}
