@@ -1,7 +1,7 @@
+import { BoxIcon, Home, ListTodo, Store } from "lucide-react";
 import Link from "next/link";
 import { cn } from "../_lib/utils";
 import { buttonVariants } from "./ui/button";
-import { BoxIcon, Home, ListTodo } from "lucide-react";
 
 export default function MobileMenu() {
   return (
@@ -25,6 +25,15 @@ export default function MobileMenu() {
           )}
         >
           <ListTodo size={17} /> Categorias
+        </Link>
+        <Link
+          href="/todos-estabelecimentos"
+          className={cn(
+            buttonVariants({ variant: "ghost" }),
+            "flex w-full items-center justify-start gap-2 text-base",
+          )}
+        >
+          <Store size={17} /> Estabelecimentos
         </Link>
         <Link
           href="/sugestoes"
