@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import EstablishmentItem from "@/app/_components/establishment-item";
 import Header from "@/app/_components/header";
 import { db } from "@/app/_lib/prisma";
+import Search from "@/app/_components/search";
 
 interface CategoriaProps {
   params: {
@@ -51,6 +52,9 @@ export default async function CategoriaPage({
   return (
     <>
       <Header />
+      <div className="mx-auto max-w-screen-xl px-4 pt-4 md:hidden md:px-0">
+        <Search />
+      </div>
       <div className="mx-auto max-w-screen-xl px-4 py-6 md:px-0">
         <h2 className="text-lg">{category.name}</h2>
 
