@@ -26,6 +26,7 @@ export default async function EstablishmentList({
         <EstablishmentItem
           key={establishment.id}
           establishment={establishment}
+          orientation="row"
         />
       ))}
     </div>

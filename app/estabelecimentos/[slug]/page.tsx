@@ -1,16 +1,16 @@
-import Header from "@/app/_components/header";
-import PhoneItems from "@/app/_components/phone-items";
-import { Button } from "@/app/_components/ui/button";
-import { Card, CardContent } from "@/app/_components/ui/card";
-import { db } from "@/app/_lib/prisma";
 import { Clock, MapPin, MapPinned, MenuIcon } from "lucide-react";
+import type { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import BackButton from "./_components/button-back";
-import { Sheet, SheetContent, SheetTrigger } from "@/app/_components/ui/sheet";
+import Header from "@/app/_components/header";
 import MobileMenu from "@/app/_components/mobile-menu";
-import { Metadata, ResolvingMetadata } from "next";
+import PhoneItems from "@/app/_components/phone-items";
+import { Button } from "@/app/_components/ui/button";
+import { Card, CardContent } from "@/app/_components/ui/card";
+import { Sheet, SheetContent, SheetTrigger } from "@/app/_components/ui/sheet";
+import { db } from "@/app/_lib/prisma";
+import BackButton from "./_components/button-back";
 
 interface EstabelecimentoProps {
   params: {

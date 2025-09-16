@@ -7,18 +7,25 @@ import { Card, CardContent } from "./ui/card";
 
 interface EstablishmentItemProps {
   establishment: Establishment;
+  orientation?: "row" | "col";
 }
 
 export default function EstablishmentItem({
   establishment,
+  orientation = "col",
 }: EstablishmentItemProps) {
   const establishmentUrl = `/estabelecimentos/${establishment.slug}`;
+  const isRow = orientation === "row";
+  const mobileCardMaxWidth = isRow ? "max-w-[300px]" : "max-w-[500px]";
 
   return (
     <>
       {/* Mobile: Card inteiro é clicável */}
-      <Link href={establishmentUrl} className="block md:hidden">
-        <Card className="min-w-[250px] max-w-[400px] md:min-w-[300px]">
+      <Link
+        href={establishmentUrl}
+        className={cn("block md:hidden", mobileCardMaxWidth)}
+      >
+        <Card className="w-full min-w-[250px]">
           <Image
             src={establishment.imageUrl}
             alt={establishment.name}
@@ -36,12 +43,9 @@ export default function EstablishmentItem({
               <p className="truncate text-sm text-muted-foreground">
                 {establishment.address}
               </p>
-              <Link
-                href={establishmentUrl}
-                className={cn(buttonVariants({ variant: "secondary" }), "mt-2")}
-              >
-                Ver local
-              </Link>
+              <div className="inline-flex justify-center whitespace-nowrap rounded-md bg-secondary py-2 text-sm font-medium text-secondary-foreground hover:bg-secondary/80">
+                <p>Ver local</p>
+              </div>
               {/* Botão omitido no mobile */}
             </div>
           </CardContent>

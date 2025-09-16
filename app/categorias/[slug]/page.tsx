@@ -1,9 +1,9 @@
+import type { Metadata, ResolvingMetadata } from "next";
+import Image from "next/image";
+import { notFound } from "next/navigation";
 import EstablishmentItem from "@/app/_components/establishment-item";
 import Header from "@/app/_components/header";
 import { db } from "@/app/_lib/prisma";
-import { Metadata, ResolvingMetadata } from "next";
-import Image from "next/image";
-import { notFound } from "next/navigation";
 
 interface CategoriaProps {
   params: {
@@ -75,6 +75,7 @@ export default async function CategoriaPage({
               <EstablishmentItem
                 key={establishment.id}
                 establishment={establishment}
+                orientation="col"
               />
             ))}
           </div>
