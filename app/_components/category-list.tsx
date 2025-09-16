@@ -3,6 +3,7 @@ import { db } from "../_lib/prisma";
 import { cn } from "../_lib/utils";
 import CategoryItem from "./category-item";
 import { buttonVariants } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default async function CategoryList() {
   const category = await db.category.findMany({
@@ -20,9 +21,12 @@ export default async function CategoryList() {
       ))}
       <Link
         href="/categorias"
-        className={cn(buttonVariants({ variant: "outline" }), "rounded-full")}
+        className={cn(
+          buttonVariants({ variant: "ghost" }),
+          "flex items-center gap-2 rounded-full",
+        )}
       >
-        Ver todas
+        Todas Categorias <ArrowRight size={14} />
       </Link>
     </div>
   );
