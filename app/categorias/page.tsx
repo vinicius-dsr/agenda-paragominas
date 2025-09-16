@@ -7,6 +7,11 @@ import Search from "../_components/search";
 
 export default async function CategoriasPage() {
   const categories = await db.category.findMany({
+    where: {
+      name: {
+        not: "Todos",
+      },
+    },
     orderBy: {
       name: "asc",
     },
@@ -18,7 +23,27 @@ export default async function CategoriasPage() {
         <Search />
       </div>
       <div className="mx-auto max-w-screen-xl px-4 py-6 md:px-0">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="md:hidden">
+          <div className="flex flex-col gap-4">
+            {categories.map((category) => (
+              <Link key={category.id} href={`/categorias/${category.slug}`}>
+                <Card className="flex items-center justify-between px-8 py-4">
+                  <Image
+                    src={category.icon}
+                    alt={category.name}
+                    width={0}
+                    height={0}
+                    sizes="100%"
+                    quality={100}
+                    className="max-h-[50px] w-[50px] invert"
+                  />
+                  <h3 className="text-md font-medium">{category.name}</h3>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="hidden grid-cols-2 gap-4 md:grid md:grid-cols-4">
           {categories.map((category) => (
             <Link key={category.id} href={`/categorias/${category.slug}`}>
               <Card className="min-h-[250px] w-full py-1 md:min-h-[300px]">
@@ -33,7 +58,7 @@ export default async function CategoriasPage() {
                 />
                 <CardContent className="p-4">
                   <div className="flex flex-col items-center">
-                    <h3 className="text-center text-lg font-semibold">
+                    <h3 className="text-center text-lg font-medium">
                       {category.name}
                     </h3>
                   </div>
