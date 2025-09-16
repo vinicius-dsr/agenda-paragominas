@@ -22,18 +22,6 @@ export default function Home() {
       {/* banner */}
       <Banner />
 
-      {/* Orgãos públicos */}
-      <div className="mx-auto mt-3 flex max-w-screen-xl items-center justify-between px-4">
-        <h3 className="text-lg">Órgãos públicos</h3>
-        <Link
-          href="/categorias/orgaos-publicos"
-          className="text-sm text-muted-foreground transition-all hover:text-foreground"
-        >
-          Ver todos
-        </Link>
-      </div>
-      <EstablishmentList categoryName="Órgãos Públicos" limit={6} />
-
       {/* Recomenadados */}
       <div className="mx-auto mt-3 flex max-w-screen-xl items-center justify-between px-4">
         <h3 className="text-lg">Recomendados</h3>
@@ -45,6 +33,18 @@ export default function Home() {
         </Link>
       </div>
       <EstablishmentList categoryName="Recomendados" limit={6} />
+
+      {/* Orgãos públicos */}
+      <div className="mx-auto mt-3 flex max-w-screen-xl items-center justify-between px-4">
+        <h3 className="text-lg">Órgãos públicos</h3>
+        <Link
+          href="/categorias/orgaos-publicos"
+          className="text-sm text-muted-foreground transition-all hover:text-foreground"
+        >
+          Ver todos
+        </Link>
+      </div>
+      <EstablishmentList categoryName="Órgãos Públicos" limit={6} />
     </>
   );
 }
