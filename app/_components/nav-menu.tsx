@@ -15,8 +15,8 @@ export default function NavMenu() {
           "flex items-center gap-2 rounded-full",
         )}
       >
-        <BoxIcon size={17} />
         Caixa de sugestões
+        <BoxIcon size={17} />
       </Link>
     </div>
   );

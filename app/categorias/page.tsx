@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "../_components/header";
+import Search from "../_components/search";
 import { Card, CardContent } from "../_components/ui/card";
 import { db } from "../_lib/prisma";
-import Link from "next/link";
-import Search from "../_components/search";
 
 export default async function CategoriasPage() {
   const categories = await db.category.findMany({
@@ -23,6 +23,9 @@ export default async function CategoriasPage() {
         <Search />
       </div>
       <div className="mx-auto max-w-screen-xl px-4 py-6 md:px-0">
+        <h2 className="mb-5 text-center text-xl font-medium md:text-start md:text-2xl">
+          Todas Categorias
+        </h2>
         <div className="md:hidden">
           <div className="flex flex-col gap-4">
             {categories.map((category) => (

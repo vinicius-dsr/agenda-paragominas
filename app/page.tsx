@@ -17,10 +17,16 @@ export default function Home() {
       </div>
 
       {/* Lista de categorias */}
-      <CategoryList />
+      <div className="mx-auto flex items-center gap-4 overflow-auto px-4 md:hidden md:px-0 [&::-webkit-scrollbar]:hidden">
+        <CategoryList />
+      </div>
 
       {/* banner */}
       <Banner />
+
+      <div className="mx-auto mb-2 flex max-w-screen-xl items-center gap-4 overflow-auto px-4 py-5 [&::-webkit-scrollbar]:hidden">
+        <CategoryList />
+      </div>
 
       {/* Recomenadados */}
       <div className="mx-auto mt-3 flex max-w-screen-xl items-center justify-between px-4">
