@@ -11,20 +11,20 @@ export default function Home() {
       {/* Menu */}
       <Header />
 
+      {/* banner */}
+      <Banner />
+
       {/* Pesquisa */}
-      <div className="mx-auto max-w-screen-xl px-4 py-6 md:hidden md:px-0">
+      <div className="mx-auto max-w-screen-xl px-4 pb-4 pt-2 md:hidden md:px-0">
         <Search />
       </div>
 
       {/* Lista de categorias */}
-      <div className="mx-auto flex items-center gap-4 overflow-auto px-4 md:hidden md:px-0 [&::-webkit-scrollbar]:hidden">
+      <div className="mx-auto flex items-center gap-4 overflow-auto px-4 pb-4 pt-2 md:hidden md:px-0 [&::-webkit-scrollbar]:hidden">
         <CategoryList />
       </div>
 
-      {/* banner */}
-      <Banner />
-
-      <div className="mx-auto mb-2 flex max-w-screen-xl items-center gap-4 overflow-auto px-4 py-5 [&::-webkit-scrollbar]:hidden">
+      <div className="mx-auto mb-2 hidden max-w-screen-xl items-center gap-4 overflow-auto px-4 py-5 md:flex [&::-webkit-scrollbar]:hidden">
         <CategoryList />
       </div>
 
